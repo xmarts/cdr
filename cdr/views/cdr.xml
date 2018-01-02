@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<odoo>
+
+<record id="view_cdr_search" model="ir.ui.view">
+            <field name="name">view.cdr.search</field>
+            <field name="model">sale.cdr</field>
+            <field name="arch" type="xml">
+                <search string="CDR for telephony records">
+                    <field name="numeroa"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                         <filter string="Numero A" icon="terp-partner" domain="[]" context="{'group_by':'numeroa'}"/>
+                        <separator orientation="vertical"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="view_cdr_form" model="ir.ui.view">
+            <field name="name">view.cdr.form</field>
+            <field name="model">sale.cdr</field>
+            <field name="arch" type="xml">
+                <form string="CDR for telephony records">
+                  <header>
+                </header>
+                    <sheet>
+                     <!-- <div class="oe_title">
+                        <label string="Nombre"/>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>-->
+                        <group >
+                           <group >
+                               <field name="numeroa" />
+                               <field name="numerob" />
+                               <field name="fecha" />
+                               <field name="inicio" />
+                               <field name="fin" />
+                               <field name="min"/>
+                               <field name="montobase" />
+                               <field name="montofinal" />
+                          </group>
+                            <group >
+
+                                <field name="tarifabase" />
+                                <field name="tipotrafico" />
+                                <field name="tipoorigen" />
+                                <field name="tipodestino" />
+                                <field name="producto" />
+                                <field name="plan" />
+                                <field name="razonsocial" />
+
+                             </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_cdr_tree" model="ir.ui.view">
+            <field name="name">view.cdr.tree</field>
+            <field name="model">sale.cdr</field>
+            <field name="arch" type="xml">
+                <tree string="CDR for telephony records">
+                            <field name="numeroa" />
+                               <field name="numerob" />
+                               <field name="fecha" />
+                               <field name="inicio" />
+                               <field name="fin" />
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="action_cdr" model="ir.actions.act_window">
+            <field name="name">CDR for telephony records</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.cdr</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem action="action_cdr"
+                  id="menu_cdr" sequence="20"
+           />
+
+
+
+
+</odoo>

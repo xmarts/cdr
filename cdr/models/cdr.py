@@ -9,6 +9,7 @@ _logger = logging.getLogger(__name__)
 class Cdr(models.Model):
     _name = "sale.cdr"
     _description = "CDR for telephony records"
+    #nombre = fields.Char(string="Nombre")
     numeroa= fields.Char(string="Número A",help="Número A con 10 digitos",required=True)
     numerob= fields.Char(string="Número B",help="Número B con 10 digitos")
     poblacion= fields.Char(string="Poblacion Destino",help="Población Destino")
