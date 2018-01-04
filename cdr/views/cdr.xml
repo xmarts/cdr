@@ -51,7 +51,7 @@
                                 <field name="producto" />
                                 <field name="plan" />
                                 <field name="razonsocial" />
-
+                                <field name="subscription" />
                              </group>
                         </group>
 

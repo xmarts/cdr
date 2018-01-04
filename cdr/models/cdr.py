@@ -30,4 +30,5 @@ class Cdr(models.Model):
     producto=fields.Char(string="Producto",help="Producto Ofertado")
     plan=fields.Char(string="Plan",help="Plan Ofertado")
     razonsocial=fields.Char(string="Razón Social",help="Razón Social")
-
+    subscription=fields.Many2one("sale.subscription",string="Contrato de servicio",help='Relacion a contrato')
+    subscriptionline=fields.Many2one("sale.subscription.line",string="Linea de contrato",help='Relacion al contrato')
