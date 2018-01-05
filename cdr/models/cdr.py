@@ -32,3 +32,4 @@ class Cdr(models.Model):
     razonsocial=fields.Char(string="Razón Social",help="Razón Social")
     subscription=fields.Many2one("sale.subscription",string="Contrato de servicio",help='Relacion a contrato')
     subscriptionline=fields.Many2one("sale.subscription.line",string="Linea de contrato",help='Relacion al contrato')
+    fechafactura=fields.Date(string="Fecha de Factura",help="Fecha de Facturación relacionada")
