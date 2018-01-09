@@ -41,6 +41,7 @@
                                <field name="min"/>
                                <field name="montobase" />
                                <field name="montofinal" />
+                               <field name="poblacion" />
                           </group>
                             <group >
 
